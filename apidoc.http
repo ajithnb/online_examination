@@ -1,0 +1,36 @@
+###
+GET http://127.0.0.1:8000/questions/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/questions/
+Content-Type: application/json
+    
+    {
+        "question": "Which symbol is used for a single-line comment in Python?",
+        "option_a": "//",
+        "option_b": "/*",
+        "option_c": "#",
+        "option_d": "--",
+        "correct_answer": "option_c"
+    }
+###
+GET http://127.0.0.1:8000/questions/2/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/questions/2/
+Content-Type: application/json
+
+{
+        "question": "What is the output of 5 + 3 * 2 ?",
+        "option_a": 16,
+        "option_b": 11,
+        "option_c": 13,
+        "option_d": 10,
+        "correct_answer": "option_b"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/questions/9/
